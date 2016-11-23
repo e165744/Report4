@@ -15,6 +15,7 @@ public class LivingThing {
     public boolean getIsDead() {
         return dead;
     }
+
     public void setIsDead(boolean dead) {
         this.dead = dead;
     }
@@ -22,11 +23,12 @@ public class LivingThing {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public void getAttack(LivingThing opponent) {
+    public void attack(LivingThing opponent) {
         int damage = (int) (Math.random() * attack);
         if (hitPoint >= 0) {
             System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, opponent.getName(), damage);
@@ -38,6 +40,9 @@ public class LivingThing {
         this.attack = attack;
     }
 
+    public int getHitPoint(){
+        return hitPoint;
+    }
 
     public void setHitPoint(int hitPoint){
         this.hitPoint = hitPoint;

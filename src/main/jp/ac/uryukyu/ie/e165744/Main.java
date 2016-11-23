@@ -8,11 +8,11 @@ public class Main {
             System.out.printf("%s vs. %s\n", hero.getName(), enemy.getName());
 
             int turn = 0;
-            while( hero.setIsDead() == false && enemy.setIsDead() == false ){
+            while( hero.getIsDead() == false && enemy.getIsDead() == false ){
                 turn++;
                 System.out.printf("%dターン目開始！\n", turn);
-                hero.setAttack(enemy);
-                enemy.setAttack(hero);
+                hero.attack(enemy);
+                enemy.attack(hero);
             }
             System.out.println("戦闘終了");
         }
